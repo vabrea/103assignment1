@@ -10,11 +10,35 @@ let orderItem="Whiteboard"
 let itemDescription="20x20in dry erase board"
 let itemQty="1"
 let itemNumber="242424"
-let shippingTime="2-3 Business Days"
+let shippingTime="2-3 Business Days."
 let shipArrival="March 4, 2022"
 let orderMessage="Thank you for shopping with Amazon.com"
 
 
 let template=`
-    <p>Hello</p>
+    <h2>Thank you for your purchase from <u>${sellerName}</u></h2>
+    <p>Order Number: ${orderNumber} arriving on ${shipArrival}<p>
+    <h4>Items Ordered</h4>
+    <p> <b>Item Name: ${orderItem}</b>
+    <br>
+    Item Description: ${itemDescription}
+    <br>
+    Items Ordered: ${itemQty}
+    <br>
+    Item Number: ${itemNumber}
+    <br>
+    <br>
+    ${orderMessage}, your item will arrive in ${shippingTime}
+    <br>
+    <br>
+    <b>Shipping Info:</b>
+    <br>
+    ${buyerFirstname} ${buyerLastname}
+    <br>
+    ${buyerAddress}
+    <br>
+    ${buyerCity}, ${buyerState} ${buyerZip}
+    </p>
 `
+
+document.write(template)
